@@ -19,6 +19,12 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-    
-    - name: Tests
-      run: npm run test
+
+    - name: Install Node
+      uses: actions/setup-node@v1
+
+    - name: npm dependencies
+        run: npm install
+
+    - name: Test
+        run: npm run test
