@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
 	{
 		path: 'home',
-		loadChildren: () => import('feature_modules/home/home.module').then( m => m.HomeModule )
+		loadChildren: () => import('projects/hail-hail/src/app/home/home.module').then( m => m.HomeModule )
 	},
 ];
 
