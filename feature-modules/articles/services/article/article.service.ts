@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { Observable, of } from 'rxjs';
 
 @Injectable( {
 	providedIn: 'root'
 } )
-export class NewsService {
+export class ArticleService {
 
 	mockNews = [
 		{
@@ -22,7 +22,8 @@ export class NewsService {
 		{
 			_id: '5e6d5e6c083f3c0017c9dc7e',
 			title: 'Neil Lennon On What He Will Do With His Celtic Players When They Have No One To Play Against',
-			description: 'WHAT do you do with a group of footballers when they have nobody to play football against? That is the question being pondered by managers and…',
+			description: 'WHAT do you do with a group of footballers when they have nobody to play football against? ' +
+				'That is the question being pondered by managers and…',
 			source: 'Glasgow Evening Times',
 			url: 'https://www.glasgowtimes.co.uk/sport/18305912.neil-lennon-will-celtic-players-no-one-play/',
 			image: 'https://www.glasgowtimes.co.uk/resources/images/11153169/',
