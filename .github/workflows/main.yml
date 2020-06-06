@@ -21,4 +21,4 @@ jobs:
     - uses: actions/checkout@v2
     
     - name: Tests
-      uses: ahmedrizwan/angular-karma-test-action@v1.0.8
+      run: npm run test
