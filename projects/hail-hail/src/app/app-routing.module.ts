@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
 	{
-		path: 'home',
+		path: '',
 		loadChildren: () => import('projects/hail-hail/src/app/home/home.module').then( m => m.HomeModule )
 	},
 ];
