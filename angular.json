@@ -87,6 +87,10 @@
 						"polyfills": "projects/hail-hail/src/polyfills.ts",
 						"tsConfig": "projects/hail-hail/tsconfig.spec.json",
 						"karmaConfig": "karma.conf.js",
+						"codeCoverageExclude": [
+							"projects/hail-hail/src/polyfills.ts",
+							"projects/hail-hail/src/test.ts"
+						],
 						"assets": [
 							"projects/hail-hail/src/favicon.ico",
 							"projects/hail-hail/src/assets"

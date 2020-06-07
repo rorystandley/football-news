@@ -24,3 +24,9 @@ jobs:
 
       - name: Test
         run: npm run test
+
+      - name: Codecov
+        uses: codecov/codecov-action@v1.0.7
+        with:
+          token: bbf3a02f-7788-43a3-aaa5-e435c1b1d648
+          file: coverage

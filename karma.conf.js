@@ -13,13 +13,29 @@ module.exports = function (config) {
             require('@angular-devkit/build-angular/plugins/karma'),
             require('karma-coverage-istanbul-reporter'),
             require('karma-spec-reporter'),
+            require('karma-junit-reporter')
         ],
+        files: [],
+
+        // optionally, configure the reporter
+        coverageReporter: {
+            includeAllSources: true,
+            dir: 'coverage/',
+            reporters: [
+                {type: 'text-summary'},
+                {type: 'json'},
+                {type: 'html'}
+            ]
+        },
+        mime: {
+            'text/x-typescript': ['ts', 'tsx']
+        },
         coverageIstanbulReporter: {
-            dir: require('path').join(__dirname, './coverage/football-news'),
-            reports: ['html', 'lcovonly', 'text-summary', 'text'],
+            dir: require('path').join(__dirname, './coverage'),
+            reports: ['html', 'lcovonly', 'text', 'text-summary'],
             fixWebpackSourcePaths: true
         },
-        reporters: ['coverage-istanbul', 'spec', 'kjhtml'],
+        reporters: ['coverage-istanbul', 'spec', 'kjhtml', 'junit'],
         customLaunchers: {
             ChromeHeadless: {
                 base: 'Chrome',
