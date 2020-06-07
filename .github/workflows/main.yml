@@ -2,11 +2,7 @@
 
 name: CI
 
-on:
-  push:
-    branches: [ develop ]
-  pull_request:
-    branches: [ develop ]
+on: [push, pull_request]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -17,14 +13,14 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
 
-    - name: Install Node
-      uses: actions/setup-node@v1
+      - name: Install Node
+        uses: actions/setup-node@v1
 
-    - name: npm dependencies
-      run: npm install
+      - name: npm dependencies
+        run: npm install
 
-    - name: Test
-      run: npm run test
+      - name: Test
+        run: npm run test
