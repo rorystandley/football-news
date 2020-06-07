@@ -24,7 +24,8 @@ module.exports = function (config) {
             reporters: [
                 {type: 'text-summary'},
                 {type: 'json'},
-                {type: 'html'}
+                {type: 'html'},
+                {type: 'lcov'}
             ]
         },
         mime: {
@@ -35,7 +36,7 @@ module.exports = function (config) {
             reports: ['html', 'lcovonly', 'text', 'text-summary'],
             fixWebpackSourcePaths: true
         },
-        reporters: ['coverage-istanbul', 'spec', 'kjhtml', 'junit'],
+        reporters: ['coverage-istanbul', 'spec', 'kjhtml'],
         customLaunchers: {
             ChromeHeadless: {
                 base: 'Chrome',
