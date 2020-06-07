@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { NewsService } from '../../../../../../../core/services/news.service';
 
 @Component( {
 	selector: 'app-home',
@@ -10,14 +9,11 @@ export class HomeComponent implements OnInit {
 
 	data;
 
-	constructor( private newsService: NewsService ) {
+	constructor() {
 	}
 
 	ngOnInit() {
-		this.newsService.get().subscribe( resp => {
-			console.log( resp );
-			this.data = resp;
-		} );
+
 	}
 
 }
