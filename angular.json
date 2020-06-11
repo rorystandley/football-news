@@ -27,6 +27,11 @@
 							"projects/hail-hail/src/favicon.ico",
 							"projects/hail-hail/src/assets"
 						],
+						"stylePreprocessorOptions": {
+							"includePaths": [
+								"src/styles"
+							]
+						},
 						"styles": [
 							"node_modules/bootstrap/dist/css/bootstrap.min.css",
 							"projects/hail-hail/src/styles.main.scss"
