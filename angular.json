@@ -99,7 +99,7 @@
 							"projects/hail-hail/src/assets"
 						],
 						"styles": [
-							"projects/hail-hail/src/styles.scss"
+							"projects/hail-hail/src/styles/main.scss"
 						],
 						"scripts": []
 					}
