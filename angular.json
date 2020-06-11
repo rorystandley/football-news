@@ -28,18 +28,16 @@
 							"projects/hail-hail/src/assets"
 						],
 						"styles": [
-							"projects/hail-hail/src/styles.scss"
+							"node_modules/bootstrap/dist/css/bootstrap.min.css",
+							"projects/hail-hail/src/styles.main.scss"
 						],
-						"scripts": []
+						"scripts": [
+							"node_modules/jquery/dist/jquery.min.js",
+							"node_modules/bootstrap/dist/js/bootstrap.min.js"
+						]
 					},
 					"configurations": {
 						"production": {
-							"fileReplacements": [
-								{
-									"replace": "projects/hail-hail/src/environments/environment.ts",
-									"with": "projects/hail-hail/src/environments/environment.prod.ts"
-								}
-							],
 							"optimization": true,
 							"outputHashing": "all",
 							"sourceMap": false,
