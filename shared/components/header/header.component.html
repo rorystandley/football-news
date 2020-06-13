@@ -1,13 +1,13 @@
 <section class="header">
     <section class="header__masthead row">
         <div class="header__social col">
-            <a [href]="facebook" target="_blank">
+            <a *ngIf="social.facebook" [href]="social.facebook" target="_blank">
                 <fa-icon [icon]="['fab', 'facebook']"></fa-icon>
             </a>
-            <a [href]="twitter" target="_blank">
+            <a *ngIf="social.twitter" [href]="social.twitter" target="_blank">
                 <fa-icon [icon]="['fab', 'twitter']"></fa-icon>
             </a>
-            <a [href]="instagram" target="_blank">
+            <a *ngIf="social.instagram" [href]="social.instagram" target="_blank">
                 <fa-icon [icon]="['fab', 'instagram']"></fa-icon>
             </a>
         </div>

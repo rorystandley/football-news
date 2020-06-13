@@ -7,9 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 } )
 export class HeaderComponent implements OnInit {
 
-	@Input() facebook;
-	@Input() twitter;
-	@Input() instagram;
+	@Input() social;
 
 	constructor() {
 	}
