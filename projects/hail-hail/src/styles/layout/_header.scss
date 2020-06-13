@@ -1,5 +1,7 @@
+@import "abstracts/functions";
+
 .header {
   &__masthead {
-    background: green;
+    background: color(primary, base);
   }
 }
