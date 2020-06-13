@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Social } from '../../interfaces/social.interface';
 
 @Component( {
 	selector: 'app-header',
@@ -7,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 } )
 export class HeaderComponent implements OnInit {
 
-	@Input() social;
+	@Input() social: Social;
 
 	constructor() {
 	}
