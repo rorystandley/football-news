@@ -1,7 +1,7 @@
 .header {
   &__masthead {
+    align-items: center;
     height: 50px;
-    line-height: 50px;
   }
 
   &__social {
@@ -12,5 +12,14 @@
       font-size: 22px;
       margin-right: 15px;
     }
+  }
+
+  &__main {
+    align-items: center;
+    min-height: 130px;
+  }
+
+  &__logo {
+    width: 100%;
   }
 }
