@@ -1,0 +1,19 @@
+@import "base/colours";
+
+@function color($color,$tone: 'base') {
+
+  @if map-has-key($palette, $color) {
+    $color: map-get($palette, $color);
+
+    @if map-has_key($color, $tone) {
+      $tone: map-get($color, $tone);
+      @return $tone;
+    }
+
+    @warn "unknown tone `#{$tone}` in color";
+    @return null;
+  }
+
+  @warn "unknown color `#{$color}` in palette";
+  @return null;
+}

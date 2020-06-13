@@ -1,10 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Social } from '../../interfaces/social.interface';
 
 @Component( {
 	selector: 'app-header',
-	templateUrl: './header.component.html'
+	templateUrl: './header.component.html',
+	styleUrls: [ './header.component.scss' ]
 } )
 export class HeaderComponent implements OnInit {
+
+	@Input() social: Social;
 
 	constructor() {
 	}

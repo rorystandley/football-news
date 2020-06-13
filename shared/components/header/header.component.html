@@ -1,1 +1,21 @@
-<p>header works!</p>
+<section class="header">
+    <section class="header__masthead row">
+        <section class="header__social col">
+            <a *ngIf="social.facebook" [href]="social.facebook" target="_blank">
+                <fa-icon [icon]="['fab', 'facebook']"></fa-icon>
+            </a>
+            <a *ngIf="social.twitter" [href]="social.twitter" target="_blank">
+                <fa-icon [icon]="['fab', 'twitter']"></fa-icon>
+            </a>
+            <a *ngIf="social.instagram" [href]="social.instagram" target="_blank">
+                <fa-icon [icon]="['fab', 'instagram']"></fa-icon>
+            </a>
+        </section>
+    </section>
+    <section class="header__main row">
+        <section class="col-md-4">
+            <img class="header__logo" src="assets/images/logo.png" />
+        </section>
+        <section class="col-md-6"></section>
+    </section>
+</section>

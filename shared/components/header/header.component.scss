@@ -1,0 +1,25 @@
+.header {
+  &__masthead {
+    align-items: center;
+    height: 50px;
+  }
+
+  &__social {
+    text-align: right;
+
+    a {
+      display: inline-block;
+      font-size: 22px;
+      margin-right: 15px;
+    }
+  }
+
+  &__main {
+    align-items: center;
+    min-height: 130px;
+  }
+
+  &__logo {
+    width: 100%;
+  }
+}
