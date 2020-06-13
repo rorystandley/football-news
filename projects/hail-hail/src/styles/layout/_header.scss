@@ -4,4 +4,10 @@
   &__masthead {
     background: color(primary, base);
   }
+
+  &__social {
+    a {
+      color: color(primary, white)
+    }
+  }
 }
