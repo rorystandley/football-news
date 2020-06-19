@@ -19,7 +19,8 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 	],
 	exports: [
 		HeaderComponent,
-		FooterComponent
+		FooterComponent,
+		NavigationComponent
 	]
 } )
 export class SharedModule {
