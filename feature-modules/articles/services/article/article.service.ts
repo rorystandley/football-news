@@ -42,6 +42,19 @@ export class ArticleService {
 			timestamp: '2020-03-14T22:45:00.623Z',
 			views: 0,
 		}
+		,
+		{
+			_id: '5e6d5e6c083f3c0017c9dc7e',
+			title: 'Neil Lennon On What He Will Do With His Celtic Players When They Have No One To Play Against',
+			description: 'WHAT do you do with a group of footballers when they have nobody to play football against? ' +
+				'That is the question being pondered by managers and…',
+			source: 'Glasgow Evening Times',
+			url: 'https://www.glasgowtimes.co.uk/sport/18305912.neil-lennon-will-celtic-players-no-one-play/',
+			image: 'https://www.glasgowtimes.co.uk/resources/images/11153169/',
+			tenant: 'celtic',
+			timestamp: '2020-03-14T22:45:00.551Z',
+			views: 0,
+		},
 	];
 
 	constructor( private http: HttpClient ) {
