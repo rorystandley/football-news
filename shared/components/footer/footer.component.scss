@@ -1,0 +1,30 @@
+.footer {
+
+  a {
+    font-size: 14px;
+    line-height: 28px;
+    margin-right: 20px;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__menu {
+    border-bottom: 2px solid rgba(0, 0, 0, .12);
+    padding: 22px 0 10px;
+  }
+
+  &__copy {
+    font-size: 12px;
+    padding: 12px 0;
+
+    .dim {
+      color: rgba(255, 255, 255, .57);
+    }
+
+    a {
+      font-size: 12px;
+    }
+  }
+}
