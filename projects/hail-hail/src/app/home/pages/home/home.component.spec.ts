@@ -1,25 +1,36 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HomeComponent } from './home.component';
+import { ArticlesModule } from '@feature-modules/articles/articles.module';
+import { ArticleService } from '@feature-modules/articles/services/article/article.service';
+import { MockArticleService } from '@mocks';
 
-describe('HomeComponent', () => {
-  let component: HomeComponent;
-  let fixture: ComponentFixture<HomeComponent>;
+describe( 'HomeComponent', () => {
+	let component: HomeComponent;
+	let fixture: ComponentFixture<HomeComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ HomeComponent ]
-    })
-    .compileComponents();
-  }));
+	beforeEach( async( () => {
+		TestBed.configureTestingModule( {
+			imports: [
+				ArticlesModule
+			],
+			declarations: [ HomeComponent ],
+			providers: [
+				{ provide: ArticleService, useClass: MockArticleService }
+			]
+		} );
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(HomeComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+		fixture = TestBed.overrideComponent( HomeComponent, {
+			set: {
+				template: ''
+			}
+		} ).createComponent( HomeComponent );
+		component = fixture.componentInstance;
+		fixture.detectChanges();
+	} ) );
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+
+	it( 'should create', () => {
+		expect( component ).toBeTruthy();
+	} );
+} );

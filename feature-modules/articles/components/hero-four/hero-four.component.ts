@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 } )
 export class HeroFourComponent {
 
-	@Input data;
+	@Input() data;
 
 	constructor() {
 	}
