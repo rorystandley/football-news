@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ArticleService } from './services/article/article.service';
-import { ArticlesFourGridComponent } from './components/articles-four-grid/articles-four-grid.component';
-
+import { HeroFourComponent } from './components/hero-four/hero-four.component';
 
 @NgModule( {
 	declarations: [
-		ArticlesFourGridComponent
+		HeroFourComponent
 	],
 	imports: [
 		CommonModule
@@ -15,7 +14,7 @@ import { ArticlesFourGridComponent } from './components/articles-four-grid/artic
 		ArticleService
 	],
 	exports: [
-		ArticlesFourGridComponent
+		HeroFourComponent
 	]
 } )
 export class ArticlesModule {
