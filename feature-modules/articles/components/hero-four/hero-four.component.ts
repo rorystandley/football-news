@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component( {
 	selector: 'app-hero-four',
@@ -8,8 +8,13 @@ import { Component, Input } from '@angular/core';
 export class HeroFourComponent {
 
 	@Input() data;
+	@Output() id = new EventEmitter();
 
 	constructor() {
+	}
+
+	clickMe( data ) {
+		this.id.emit( data );
 	}
 
 }

@@ -1,12 +1,10 @@
 <section *ngIf="data" class="hero4 row">
     <div *ngFor="let item of data" class="col-md-3 col-sm-6">
-        <a [routerLink]="['/article', item._id]">
-            <article class="hero4__article"
-                     [ngStyle]="{ 'background-image': 'url(' + item.image + ')'}">
-                <div class="hero4__title">
-                    {{item.title}}
-                </div>
-            </article>
-        </a>
+        <article (click)="clickMe(item._id)" class="hero4__article"
+                 [ngStyle]="{ 'background-image': 'url(' + item.image + ')'}">
+            <div class="hero4__title">
+                {{item.title}}
+            </div>
+        </article>
     </div>
 </section>
