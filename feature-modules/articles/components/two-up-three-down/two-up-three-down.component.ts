@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Article } from '@feature-modules/articles/interfaces/article.interface';
 
 @Component( {
 	selector: 'app-two-up-three-down',
@@ -7,7 +8,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 } )
 export class TwoUpThreeDownComponent {
 
-	@Input() data;
+	@Input() data: Article[];
 	@Output() id = new EventEmitter();
 
 	constructor() {
