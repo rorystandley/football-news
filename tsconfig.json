@@ -30,5 +30,12 @@
 	"angularCompilerOptions": {
 		"fullTemplateTypeCheck": true,
 		"strictInjectionParameters": true
-	}
+	},
+	"files": [
+		"test.ts",
+		"polyfills.ts"
+	],
+	"include": [
+		"**/*.d.ts"
+	]
 }
