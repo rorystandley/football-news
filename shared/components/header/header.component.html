@@ -1,6 +1,6 @@
 <section class="header">
     <section class="header__masthead row">
-        <section class="header__social col">
+        <section *ngIf="social" class="header__social col">
             <a *ngIf="social.facebook" [href]="social.facebook" target="_blank">
                 <fa-icon [icon]="['fab', 'facebook']"></fa-icon>
             </a>
