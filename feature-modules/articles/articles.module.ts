@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ArticleService } from './services/article/article.service';
 import { HeroFourComponent } from './components/hero-four/hero-four.component';
 import { TwoUpThreeDownComponent } from './components/two-up-three-down/two-up-three-down.component';
 
@@ -12,9 +11,7 @@ import { TwoUpThreeDownComponent } from './components/two-up-three-down/two-up-t
 	imports: [
 		CommonModule
 	],
-	providers: [
-		ArticleService
-	],
+	providers: [],
 	exports: [
 		HeroFourComponent,
 		TwoUpThreeDownComponent
