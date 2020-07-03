@@ -1,10 +1,9 @@
-.two-three {
-  &__article {
+.article {
+  &__image {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     cursor: pointer;
-    height: 224px;
     position: relative;
 
     &:before {

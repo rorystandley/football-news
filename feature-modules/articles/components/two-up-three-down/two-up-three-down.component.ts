@@ -4,7 +4,7 @@ import { Article } from '@feature-modules/articles/interfaces/article.interface'
 @Component( {
 	selector: 'app-two-up-three-down',
 	templateUrl: './two-up-three-down.component.html',
-	styleUrls: [ './two-up-three-down.component.scss' ]
+	styleUrls: [ '../../articles.module.scss' ]
 } )
 export class TwoUpThreeDownComponent {
 

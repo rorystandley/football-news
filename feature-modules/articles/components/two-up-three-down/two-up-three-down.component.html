@@ -1,17 +1,17 @@
-<section *ngIf="data" class="two-three">
+<section *ngIf="data" class="article two-three">
     <div class="row mt-4">
         <div class="col">
-            <article (click)="clickMe(data[0]._id)" class="two-three__article"
+            <article (click)="clickMe(data[0]._id)" class="article__image two-three__image"
                      [ngStyle]="{ 'background-image': 'url(' + data[0].image + ')'}">
-                <div class="two-three__title">
+                <div class="article__title">
                     {{data[0].title}}
                 </div>
             </article>
         </div>
         <div class="col">
-            <article (click)="clickMe(data[1]._id)" class="two-three__article"
+            <article (click)="clickMe(data[1]._id)" class="article__image two-three__image"
                      [ngStyle]="{ 'background-image': 'url(' + data[1].image + ')'}">
-                <div class="two-three__title">
+                <div class="article__title">
                     {{data[1].title}}
                 </div>
             </article>
@@ -19,25 +19,25 @@
     </div>
     <div class="row mt-4">
         <div class="col">
-            <article (click)="clickMe(data[2]._id)" class="two-three__article"
+            <article (click)="clickMe(data[2]._id)" class="article__image two-three__image"
                      [ngStyle]="{ 'background-image': 'url(' + data[2].image + ')'}">
-                <div class="two-three__title">
+                <div class="article__title">
                     {{data[2].title}}
                 </div>
             </article>
         </div>
         <div class="col">
-            <article (click)="clickMe(data[3]._id)" class="two-three__article"
+            <article (click)="clickMe(data[3]._id)" class="article__image two-three__image"
                      [ngStyle]="{ 'background-image': 'url(' + data[3].image + ')'}">
-                <div class="two-three__title">
+                <div class="article__title">
                     {{data[3].title}}
                 </div>
             </article>
         </div>
         <div class="col">
-            <article (click)="clickMe(data[4]._id)" class="two-three__article"
+            <article (click)="clickMe(data[4]._id)" class="article__image two-three__image"
                      [ngStyle]="{ 'background-image': 'url(' + data[4].image + ')'}">
-                <div class="two-three__title">
+                <div class="article__title">
                     {{data[4].title}}
                 </div>
             </article>

@@ -4,7 +4,7 @@ import { Article } from '@feature-modules/articles/interfaces/article.interface'
 @Component( {
 	selector: 'app-hero-four',
 	templateUrl: './hero-four.component.html',
-	styleUrls: [ './hero-four.component.scss' ]
+	styleUrls: [ '../../articles.module.scss' ]
 } )
 export class HeroFourComponent {
 
