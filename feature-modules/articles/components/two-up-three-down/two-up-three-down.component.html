@@ -1,5 +1,5 @@
 <section *ngIf="data" class="two-three">
-    <div class="row mt-2">
+    <div class="row mt-4">
         <div class="col">
             <article (click)="clickMe(data[0]._id)" class="two-three__article"
                      [ngStyle]="{ 'background-image': 'url(' + data[0].image + ')'}">
@@ -17,7 +17,7 @@
             </article>
         </div>
     </div>
-    <div class="row mt-2">
+    <div class="row mt-4">
         <div class="col">
             <article (click)="clickMe(data[2]._id)" class="two-three__article"
                      [ngStyle]="{ 'background-image': 'url(' + data[2].image + ')'}">
