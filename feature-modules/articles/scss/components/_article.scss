@@ -1,10 +1,9 @@
-.hero4 {
-  &__article {
+.article {
+  &__image {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     cursor: pointer;
-    height: 400px;
     position: relative;
 
     &:before {

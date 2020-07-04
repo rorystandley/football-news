@@ -11,7 +11,7 @@
 				}
 			},
 			"root": "projects/hail-hail",
-			"sourceRoot": "projects/hail-hail/src",
+			"sourceRoot": "./",
 			"prefix": "app",
 			"architect": {
 				"build": {
@@ -86,31 +86,26 @@
 				"test": {
 					"builder": "@angular-devkit/build-angular:karma",
 					"options": {
-						"main": "projects/hail-hail/src/test.ts",
-						"polyfills": "projects/hail-hail/src/polyfills.ts",
-						"tsConfig": "projects/hail-hail/tsconfig.spec.json",
-						"karmaConfig": "karma.conf.js",
+						"codeCoverage": true,
+						"main": "test.ts",
+						"karmaConfig": "./karma.conf.js",
+						"tsConfig": "tsconfig.spec.json",
 						"codeCoverageExclude": [
-							"projects/hail-hail/src/polyfills.ts",
-							"projects/hail-hail/src/test.ts"
 						],
-						"assets": [
-							"projects/hail-hail/src/favicon.ico",
-							"projects/hail-hail/src/assets"
-						],
+						"scripts": [],
 						"styles": [
 							"projects/hail-hail/src/styles/main.scss"
 						],
-						"scripts": []
+						"assets": [
+						]
 					}
 				},
 				"lint": {
 					"builder": "@angular-devkit/build-angular:tslint",
 					"options": {
 						"tsConfig": [
-							"projects/hail-hail/tsconfig.app.json",
-							"projects/hail-hail/tsconfig.spec.json",
-							"projects/hail-hail/e2e/tsconfig.json"
+							"tsconfig.json",
+							"tsconfig.spec.json"
 						],
 						"exclude": [
 							"**/node_modules/**"

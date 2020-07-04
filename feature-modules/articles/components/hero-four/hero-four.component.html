@@ -1,8 +1,8 @@
-<section *ngIf="data" class="hero4 row">
+<section *ngIf="data" class="article hero-four row">
     <div *ngFor="let item of data" class="col-md-3 col-sm-6">
-        <article (click)="clickMe(item._id)" class="hero4__article"
+        <article (click)="clickMe(item._id)" class="article__image hero-four__image"
                  [ngStyle]="{ 'background-image': 'url(' + item.image + ')'}">
-            <div class="hero4__title">
+            <div class="article__title">
                 {{item.title}}
             </div>
         </article>

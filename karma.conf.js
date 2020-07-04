@@ -8,35 +8,26 @@ module.exports = function (config) {
         plugins: [
             require('karma-jasmine'),
             require('karma-chrome-launcher'),
-            require('karma-jasmine-html-reporter'),
-            require('karma-coverage-istanbul-reporter'),
             require('@angular-devkit/build-angular/plugins/karma'),
             require('karma-coverage-istanbul-reporter'),
             require('karma-spec-reporter'),
-            require('karma-junit-reporter')
         ],
-        files: [],
-
-        // optionally, configure the reporter
-        coverageReporter: {
-            includeAllSources: true,
-            dir: 'coverage/',
-            reporters: [
-                {type: 'text-summary'},
-                {type: 'json'},
-                {type: 'html'},
-                {type: 'lcov'}
-            ]
-        },
-        mime: {
-            'text/x-typescript': ['ts', 'tsx']
-        },
         coverageIstanbulReporter: {
-            dir: require('path').join(__dirname, './coverage'),
-            reports: ['html', 'lcovonly', 'text', 'text-summary'],
-            fixWebpackSourcePaths: true
+            reports: ['html', 'lcovonly', 'text'],
+            dir: require('path').join(__dirname, 'coverage'),
+            fixWebpackSourcePaths: true,
+            skipFilesWithNoCoverage: false,
+            thresholds: {
+                emitWarning: false, // set to `true` to not fail the test command when thresholds are not met
+                global: {
+                    statements: 80,
+                    lines: 80,
+                    branches: 80,
+                    functions: 80
+                }
+            },
         },
-        reporters: ['coverage-istanbul', 'spec', 'kjhtml'],
+        reporters: ['coverage-istanbul', 'spec'],
         customLaunchers: {
             ChromeHeadless: {
                 base: 'Chrome',

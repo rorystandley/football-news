@@ -2,11 +2,11 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Article } from '@feature-modules/articles/interfaces/article.interface';
 
 @Component( {
-	selector: 'app-hero-four',
-	templateUrl: './hero-four.component.html',
+	selector: 'app-two-up-three-down',
+	templateUrl: './two-up-three-down.component.html',
 	styleUrls: [ '../../articles.module.scss' ]
 } )
-export class HeroFourComponent {
+export class TwoUpThreeDownComponent {
 
 	@Input() data: Article[];
 	@Output() id = new EventEmitter();

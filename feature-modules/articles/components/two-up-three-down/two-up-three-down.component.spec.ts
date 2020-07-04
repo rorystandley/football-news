@@ -1,26 +1,26 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { ArticleService } from '@feature-modules/articles/services/article/article.service';
 import { MockArticleService } from '@mocks';
-import { HeroFourComponent } from '@feature-modules/articles/components/hero-four/hero-four.component';
+import { TwoUpThreeDownComponent } from '@feature-modules/articles/components/two-up-three-down/two-up-three-down.component';
 
-describe( 'HeroFourComponent', () => {
-	let component: HeroFourComponent;
-	let fixture: ComponentFixture<HeroFourComponent>;
+describe( 'TwoUpThreeDownComponent', () => {
+	let component: TwoUpThreeDownComponent;
+	let fixture: ComponentFixture<TwoUpThreeDownComponent>;
 
 	beforeEach( async( () => {
 		TestBed.configureTestingModule( {
 			imports: [],
-			declarations: [ HeroFourComponent ],
+			declarations: [ TwoUpThreeDownComponent ],
 			providers: [
 				{ provide: ArticleService, useClass: MockArticleService }
 			]
 		} );
 
-		fixture = TestBed.overrideComponent( HeroFourComponent, {
+		fixture = TestBed.overrideComponent( TwoUpThreeDownComponent, {
 			set: {
 				template: ''
 			}
-		} ).createComponent( HeroFourComponent );
+		} ).createComponent( TwoUpThreeDownComponent );
 		component = fixture.componentInstance;
 		fixture.detectChanges();
 	} ) );
