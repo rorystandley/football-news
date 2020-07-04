@@ -11,7 +11,7 @@
 				}
 			},
 			"root": "projects/hail-hail",
-			"sourceRoot": "./",
+			"sourceRoot": "",
 			"prefix": "app",
 			"architect": {
 				"build": {
@@ -29,7 +29,7 @@
 						],
 						"stylePreprocessorOptions": {
 							"includePaths": [
-								"src/styles"
+								"projects/hail-hail/src/styles"
 							]
 						},
 						"styles": [
@@ -91,6 +91,9 @@
 						"karmaConfig": "./karma.conf.js",
 						"tsConfig": "tsconfig.spec.json",
 						"codeCoverageExclude": [
+							"polyfills.ts",
+							"mocks.ts",
+							"test.ts"
 						],
 						"scripts": [],
 						"styles": [
