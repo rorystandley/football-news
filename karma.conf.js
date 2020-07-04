@@ -9,52 +9,25 @@ module.exports = function (config) {
             require('karma-jasmine'),
             require('karma-chrome-launcher'),
             require('@angular-devkit/build-angular/plugins/karma'),
-            require("karma-spec-reporter"),
-            require('karma-jasmine-html-reporter'),
             require('karma-coverage-istanbul-reporter'),
-            require('karma-junit-reporter'),
-            require('karma-sabarivka-reporter'),
+            require('karma-spec-reporter'),
         ],
-        files: [],
-
-        // optionally, configure the reporter
-        coverageReporter: {
-            includeAllSources: true,
-            dir: 'coverage/',
-            reporters: [
-                {type: 'text-summary'},
-                {type: 'json'},
-                {type: 'html'},
-                {type: 'lcov'}
-            ],
-            include: [
-                '**/*.ts',
-                '!node_modules/',
-                '!**/polyfills.ts',
-                '!**/*.module.ts',
-                '!**/*.spec.ts',
-                '!mocks.ts',
-                '!test.ts',
-                '!**/environment.ts',
-                '!**/main.ts',
-                '!**/*interface.ts'
-            ]
-        },
-        mime: {
-            'text/x-typescript': ['ts', 'tsx']
-        },
         coverageIstanbulReporter: {
+            reports: ['html', 'lcovonly', 'text'],
             dir: require('path').join(__dirname, 'coverage'),
-            reports: ['html', 'lcovonly', 'text', 'cobertura', 'clover'],
             fixWebpackSourcePaths: true,
+            skipFilesWithNoCoverage: false,
             thresholds: {
-                statements: 5,
-                lines: 5,
-                branches: 0,
-                functions: 5
+                emitWarning: false, // set to `true` to not fail the test command when thresholds are not met
+                global: {
+                    statements: 80,
+                    lines: 80,
+                    branches: 80,
+                    functions: 80
+                }
             },
         },
-        reporters: ['sabarivka', 'coverage-istanbul', 'spec', 'kjhtml'],
+        reporters: ['coverage-istanbul', 'spec'],
         customLaunchers: {
             ChromeHeadless: {
                 base: 'Chrome',
