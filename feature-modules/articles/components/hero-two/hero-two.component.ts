@@ -1,16 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Article } from '@feature-modules/articles/interfaces/article.interface';
 
 @Component( {
 	selector: 'app-hero-two',
 	templateUrl: './hero-two.component.html',
-	styleUrls: [ '../../article.module.scss' ]
+	styleUrls: [ '../../articles.module.scss' ]
 } )
-export class HeroTwoComponent implements OnInit {
+export class HeroTwoComponent {
+
+	@Input() data: Article[];
+	@Output() id = new EventEmitter();
 
 	constructor() {
 	}
 
-	ngOnInit() {
+	clickMe( data ) {
+		this.id.emit( data );
 	}
 
 }

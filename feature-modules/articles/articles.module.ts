@@ -16,6 +16,7 @@ import { HeroTwoComponent } from './components/hero-two/hero-two.component';
 	providers: [],
 	exports: [
 		HeroFourComponent,
+		HeroTwoComponent,
 		TwoUpThreeDownComponent
 	]
 } )
